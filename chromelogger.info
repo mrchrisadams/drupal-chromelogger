@@ -1,0 +1,6 @@
+name = ChromeLogger
+description = A module to pipe logging to chrome logger instead of DPM
+core = 7.x
+package = Product Science
+
+# files[] = includes/ChromePhp.php

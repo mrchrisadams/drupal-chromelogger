@@ -1,0 +1,34 @@
+<?php
+
+/**
+ * @file chromelogger.module
+ * Logs to Chrome logger for easier debugging of requests
+ *
+ */
+
+
+function chromelogger_libraries_info() {
+
+  $libraries['chromelogger'] = array(
+    'name' => 'Chrome Logger',
+    'vendor url' => 'https://github.com/ccampbell/chromephp',
+    'download url' => 'https://raw.github.com/ccampbell/chromephp/master/ChromePhp.php',
+    'version' => '4.1.0',
+    'files' => array(
+      'php' => array('ChromePhp.php'),
+    ),
+  );
+
+  return $libraries;
+}
+
+/**
+ * Implements hook_watchdog()
+ */
+function chromelogger_watchdog(array $log_entry) {
+
+
+  if (class_exists('ChromePhp')) {
+    ChromePhp::log($log_entry);
+  }
+}
