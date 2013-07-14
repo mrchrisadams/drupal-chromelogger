@@ -4,7 +4,7 @@ Drupal ChromeLogger makes calls to Drupal's Watchdog function visible in the bro
 
 The idea behind this is that calls to `dpm()` are not the best way to represent structured data for inspection, and they are often left in themes and modules, causing issues in production.
 
-After using Chrome for lots of front end work, the debugger seemed a much better place to dump this kind of information for exploring, and this was a good excuse to try making a new drupal module.
+After using Chrome for lots of front end work, the debugger seemed a much better place to dump this kind of information for exploring, and this was a good excuse to try making a new drupal module, using the php specific project for using Chromelogger, [Chromephp][]
 
 ## Usage
 
@@ -29,15 +29,9 @@ I'd welcome some help, as it wasn't immediately clear when I first read over it.
 
 ## Credits
 
-* Original idea and code by [Craig Campbell][3]
+* Original idea and code by [Craig Campbell][]
 
 
 [Chromelogger]: http://craig.is/writing/chrome-logger
 [Chromephp]: https://github.com/ccampbell/chromelogger
 [Craig Campbell]: http://craig.is/
-
-
-## Licensing
-
-I want to release this under the MIT licence
-
